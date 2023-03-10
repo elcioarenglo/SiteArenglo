@@ -1,0 +1,57 @@
+{% load static %}
+{% include "MainPageArenglo/partials/head.html" %}
+{% include "MainPageArenglo/partials/cabecalho.html" %}
+    <br>
+    <br>
+<body>
+   
+    
+    <div class="row">
+        <div class="column">
+          <img src="{% static 'SiteArenglo/images/arquitetura/casa_uba_11.jpg' %}" style="width:100%" onclick="onClick(this)" >
+            <p>Residencia</p>
+        </div>
+        <div class="column">
+          <img src="{% static 'SiteArenglo/images/arquitetura/Casa-Raissa-3.jpg' %}" style="width:100%" onclick="onClick(this)" >
+            <p>Residencia</p>
+        </div>
+        <div class="column">
+          <img src="{% static 'SiteArenglo/images/arquitetura/Centro-Cultural.jpg' %}" style="width:100%" onclick="onClick(this)" >
+            <p>Centro Cultural Esportivo</p>
+        </div>
+        <div class="column">  
+          <img src="{% static 'SiteArenglo/images/arquitetura/Perspectiva-Zoo-1.jpg' %}" style="width:100%" onclick="onClick(this)" >
+            <p>Predio Administrativo</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+          <img src="{% static 'SiteArenglo/images/arquitetura/Conjunto-casas-Sete-Praias-1.jpg' %}" style="width:100%" onclick="onClick(this)" >
+            <p>Conjunto Residencias</p>
+        </div>
+        <div class="column">
+          <img src=""  >
+            <p></p>
+        </div>
+        <div class="column">
+          <img src=""  >
+            <p></p>
+        </div>
+        <div class="column">  
+          <img src=""  >
+            <p></p>
+        </div>
+    </div>         
+        
+
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <img class="w3-modal-content" id="img01" style="width:100%">
+</div>       
+
+</body>
+
+<script src="{% static 'SiteArenglo/js/script.js' %}"></script>
+
+<div>
+{% include "MainPageArenglo/partials/rodape.html" %}
+</div>

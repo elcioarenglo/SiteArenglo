@@ -1,0 +1,74 @@
+{% include "MainPageArenglo/partials/head.html" %}
+{% include "MainPageArenglo/partials/cabecalho.html" %}
+{% load static %}
+    <br>
+    <br>
+<body>
+
+            <div class="row">
+                <div class="column">
+                  <img src="{% static 'SiteArenglo/images/interiores/Lavabo.jpg' %}" style="width:100%" onclick="onClick(this)">
+                    <p>Lavabo</p>
+                </div>
+                <div class="column">
+                  <img src="{% static 'SiteArenglo/images/interiores/Bar1.jpg' %}" style="width:100%" onclick="onClick(this)">
+                    <p>Bar</p>
+                </div>
+                <div class="column">
+                  <img src="{% static 'SiteArenglo/images/interiores/Consultorio1.jpg' %}" style="width:100%" onclick="onClick(this)">
+                    <p>Recepção</p>
+                </div>
+                <div class="column">  
+                  <img src="{% static 'SiteArenglo/images/interiores/Sala-jantar1.jpg' %}" style="width:100%" onclick="onClick(this)">
+                    <p>Sala de Jantar</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                  <img src="{% static 'SiteArenglo/images/interiores/Sala-estar1.jpg' %}" style="width:100%" onclick="onClick(this)">
+                    <p>Sala de Estar</p>
+                </div>
+                <div class="column">
+                  <img src="{% static 'SiteArenglo/images/interiores/Sala-estar2.jpg' %}" style="width:100%" onclick="onClick(this)">
+                    <p>Sala de Estar</p>
+                </div>
+                <div class="column">
+                  <img src="{% static 'SiteArenglo/images/interiores/Jardim-inverno.jpg' %}" style="width:100%" onclick="onClick(this)">
+                    <p>Jardim de Inverno</p>
+                </div>
+                <div class="column">  
+                  <img src="{% static 'SiteArenglo/images/interiores/Varanda.jpg' %}" style="width:100%" onclick="onClick(this)">
+                    <p>Varanda</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                  <img src="{% static 'SiteArenglo/images/interiores/Spa-Elio.jpg' %}" style="width:100%" onclick="onClick(this)">
+                    <p>Spa</p>
+                </div>
+                <div class="column">
+                  <img src="">
+                    <p></p>
+                </div>
+                <div class="column">
+                  <img src="" >
+                    <p></p>
+                </div>
+                <div class="column">  
+                  <img src="">
+                    <p></p>
+                </div>
+            </div>
+            
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <img class="w3-modal-content" id="img01" style="width:100%">
+</div> 
+            
+</body>
+
+
+<script src="{% static 'SiteArenglo/js/script.js' %}"></script>
+
+</div>
+{% include "MainPageArenglo/partials/rodape.html" %}
+</div>

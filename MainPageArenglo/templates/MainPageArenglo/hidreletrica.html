@@ -1,0 +1,54 @@
+{% include "MainPageArenglo/partials/head.html" %}
+{% include "MainPageArenglo/partials/cabecalho.html" %}
+{% load static %}
+    <br>
+    <br>
+<body>
+    <div class="row">
+        <div class="column">
+          <img src="{% static 'SiteArenglo/images/hidreletrica/hidraulica-1.jpg' %}" style="width:100%" onclick="onClick(this)">
+            <p>Hidraulica</p>
+        </div>
+        <div class="column">
+          <img src="{% static 'SiteArenglo/images/hidreletrica/hidraulica-2.jpg' %}" style="width:100%" onclick="onClick(this)">
+            <p>Hidraulica</p>
+        </div>
+        <div class="column">
+          <img src="{% static 'SiteArenglo/images/hidreletrica/hidraulica-3.jpg' %}" style="width:100%" onclick="onClick(this)">
+            <p>Hidraulica</p>
+        </div>
+        <div class="column">  
+          <img src="{% static 'SiteArenglo/images/hidreletrica/Agua-fria-compras4.jpg' %}" style="width:100%" onclick="onClick(this)">
+            <p>Hidraulica</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+          <img src="{% static 'SiteArenglo/images/hidreletrica/iluminacao.jpg' %}" style="width:100%" onclick="onClick(this)">
+            <p>Luminotecnica</p>
+        </div>
+        <div class="column">
+          <img src="{% static 'SiteArenglo/images/hidreletrica/iluminacao3.jpg' %}" style="width:100%" onclick="onClick(this)">
+            <p>Luminotecnica</p>
+        </div>
+        <div class="column">
+          <img src="{% static 'SiteArenglo/images/hidreletrica/iluminacao4.jpg' %}" style="width:100%" onclick="onClick(this)">
+            <p>Luminotecnica</p>
+        </div>
+        <div class="column">  
+          <img src="" >
+            <p></p>
+        </div>
+    </div>
+
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <img class="w3-modal-content" id="img01" style="width:100%">
+</div> 
+
+</body>
+
+<script src="{% static 'SiteArenglo/js/script.js' %}"></script>
+
+</div>
+{% include "MainPageArenglo/partials/rodape.html" %}
+</div>

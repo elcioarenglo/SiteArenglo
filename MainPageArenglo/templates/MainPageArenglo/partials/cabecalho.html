@@ -1,0 +1,49 @@
+{% load static %}
+<body>
+    <header class= "main-header-container">
+        <div class="container">
+            <div>
+            <h1>
+                <a class="logo" href="/">
+                	<span>ARENGLO BRASIL</span>
+                </a>
+            </h1>
+            </div>
+                <nav class="nav-bar">
+                    <div class="nav-list">
+                        <ul>
+                            <li class="nav-item"><a class="active nav-link" href="/">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link" href={% url 'perfil' %}>PERFIL</a></li>
+                            <li class="nav-item"><a class="nav-link" href={% url 'arquitetura' %}>ARQUITETURA</a></li>
+                            <li class="nav-item"><a class="nav-link" href={% url 'interiores' %}>INTERIORES</a></li>
+                            <li class="nav-item"><a class="nav-link" href={% url 'estrutura' %}>ESTRUTURA</a></li>
+                            <li class="nav-item"><a class="nav-link" href={% url 'hidreletrica' %}>HIDRAULICA/ELETRICA</a></li>
+                            <li class="nav-item"><a class="nav-link" href={% url 'planejamento' %}>PLANEJAMENTO&GESTÃO</a></li>
+                            <li class="nav-item"><a class="nav-link" href={% url 'contato' %}>CONTATO</a>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu-icon">
+                        <a href="javascript:void(0);" class="icon" onclick="menuShow()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    
+                </nav>
+                
+                <div class="mobile-menu">
+                    <ul>
+                        <li class="nav-item"><a class="active nav-link" href="/">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'perfil' %}>PERFIL</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'arquitetura' %}>ARQUITETURA</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'interiores' %}>INTERIORES</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'estrutura' %}>ESTRUTURA</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'hidreletrica' %}>HIDRAULICA/ELETRICA</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'planejamento' %}>PLANEJAMENTO&GESTÃO</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'contato' %}>CONTATO</a>
+                    </ul>
+                </div>
+                
+                
+    </header>
+    <script src="{% static 'SiteArenglo/js/script.js' %}"></script>
+</body>

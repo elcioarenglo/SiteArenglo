@@ -1,0 +1,54 @@
+{% include "MainPageArenglo/partials/head.html" %}
+{% include "MainPageArenglo/partials/cabecalho.html" %}
+{% load static %}
+<br>
+<br>
+<body>
+   
+    		
+<div id="paginacontato-conteudo">
+
+    <p>Envie e-mail para: comercial@arenglobrasil.com.br ou:</p>
+    <br>
+    <br>
+  
+    <form action="" method="post">
+        {% csrf_token %}
+       
+        <label>    
+        {{ form.Nome.label }}
+        </label>
+        {{ form.Nome }}
+        <br>
+        <br>
+        <label> 
+        {{ form.Email.label }}
+        </label>
+        {{ form.Email }}
+        <br>
+        <br>
+    
+        <label>
+        {{ form.Mensagem.label }}
+    
+        </label>
+        {{ form.Mensagem }}
+           
+           
+      
+        <div class="button">
+            <button type="submit">Enviar sua mensagem</button>
+        </div>
+       
+      
+       
+    </form>
+   
+   
+  
+</div>
+</div>
+{% include "MainPageArenglo/partials/rodape.html" %}
+</div>
+
+<body>

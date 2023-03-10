@@ -1,0 +1,39 @@
+{% load static %}
+{% include "MainPageArenglo/partials/head.html" %}
+{% include "MainPageArenglo/partials/cabecalho.html" %}
+    <br>
+    <br>
+    <body>
+    <div class="main-header-container">
+        <div class="container"> 
+            <div class= "pagina-perfil">
+                <p> O <b>planejamento e gestão</b> de uma obra são essenciais
+                 para a obtenção de economia e/ou manutenção do orçamento
+                  previsto. Através deles é possível fazer as correções de
+                   rumo de forma a manter os parâmetros da execução da obra
+                    conforme planejado.</p>
+                <p>As ferramentas necessárias para isso são o <b>Cronograma,
+                 a rede PERT/CPM e a Curva “S”.</b></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="column-planejamento">
+          <img src="{% static 'SiteArenglo/images/planejamento/cronograma.jpg' %}"  >
+            <p>Cronograma</p>
+        </div>
+        <div class="column-planejamento">
+          <img src="{% static 'SiteArenglo/images/planejamento/pert.jpg' %}"  >
+            <p>Rede PERT</p>
+        </div>
+        <div class="column-planejamento">
+          <img src="{% static 'SiteArenglo/images/planejamento/curva-S.jpg' %}"  >
+            <p>Curva "S"</p>
+        </div>
+    </div>
+    <body>
+
+    </div>
+    {% include "MainPageArenglo/partials/rodape.html" %}
+    </div>
