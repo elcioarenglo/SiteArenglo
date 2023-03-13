@@ -1,0 +1,75 @@
+###############################################################################
+# Replace
+# siteArenglo to the name of the gunicorn file you want
+# elcio to your user name
+# SiteArengloBrasil to the folder name of your project
+# HeartPart to the folder name where you find a file called wsgi.py
+#
+###############################################################################
+# Criando o arquivo siteArenglo.socket
+sudo nano /etc/systemd/system/siteArenglo.socket
+
+###############################################################################
+# Conteúdo do arquivo
+[Unit]
+Description=gunicorn blog socket
+
+[Socket]
+ListenStream=/run/siteArenglo.socket
+
+[Install]
+WantedBy=sockets.target
+
+###############################################################################
+# Criando o arquivo siteArenglo.service
+sudo nano /etc/systemd/system/siteArenglo.service
+
+###############################################################################
+# Conteúdo do arquivo
+[Unit]
+Description=Gunicorn daemon (You can change if you want)
+Requires=siteArenglo.socket
+After=network.target
+
+[Service]
+User=elcio
+Group=www-data
+Restart=on-failure
+EnvironmentFile=SiteArengloBrasil/.env
+WorkingDirectory=SiteArengloBrasil
+# --error-logfile --enable-stdio-inheritance --log-level and --capture-output
+# are all for debugging purposes.
+ExecStart=SiteArengloBrasil/venv/bin/gunicorn \
+          --error-logfile /SiteArengloBrasil/gunicorn-error-log \
+          --enable-stdio-inheritance \
+          --log-level "debug" \
+          --capture-output \
+          --access-logfile - \
+          --workers 6 \
+          --bind unix:/run/siteArenglo.socket \
+          HeartPart.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
+###############################################################################
+# Ativando
+sudo systemctl start siteArenglo.socket
+sudo systemctl enable siteArenglo.socket
+
+# Checando
+sudo systemctl status siteArenglo.socket
+curl --unix-socket /run/siteArenglo.socket localhost
+sudo systemctl status siteArenglo
+
+# Restarting
+sudo systemctl restart siteArenglo.service
+sudo systemctl restart siteArenglo.socket
+sudo systemctl restart siteArenglo
+
+# After changing something
+sudo systemctl daemon-reload
+
+# Debugging
+sudo journalctl -u siteArenglo.service
+sudo journalctl -u siteArenglo.socket
