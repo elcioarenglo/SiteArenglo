@@ -35,7 +35,7 @@ After=network.target
 User=elcio
 Group=www-data
 Restart=on-failure
-EnvironmentFile=SiteArengloBrasil/.env
+EnvironmentFile=SiteArengloBrasil/.env-example
 WorkingDirectory=SiteArengloBrasil
 # --error-logfile --enable-stdio-inheritance --log-level and --capture-output
 # are all for debugging purposes.
